@@ -2,7 +2,7 @@
 
 # Load R's "USPersonalExpenditure" dataset using the `data()` function
 # This will produce a data frame called `USPersonalExpenditure`
-USPersonalExpenditure
+data("USPersonalExpenditure")
 
 # The variable `USPersonalExpenditure` is now accessible to you. Unfortunately,
 # it's not a data frame (it's actually what is called a matrix)

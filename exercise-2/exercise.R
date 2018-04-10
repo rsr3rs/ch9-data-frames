@@ -12,7 +12,7 @@ salaries2017 <- c(runif(100, 40000, 50000))
 # Create a vector of 100 salaries in 2018 that have changed from 2017
 # Use `runif()` to add a random number between -5000 and 10000 to each of 2017's
 # salaries (the negative] number means that a salary may have decreased!)
-salaries2018 <- salaries2017 + c(runif(100, -5000, 10000))
+salaries2018 <- salaries2017 + runif(100, -5000, 10000)
 
 # Create a data frame 'salaries' by combining the 3 vectors you just made
 # Remember to set `stringsAsFactors=FALSE`!
@@ -33,7 +33,8 @@ salaries$got_raise <- salaries$change > 0
 ### cell rather than the whole row!)
 
 # What was the 2018 salary of employee 57
-salaries[57, "salaries2018"]
+salary_57 <- salaries[salaries$employee == "Employee 57","salaries2018"]
+#salaries[57, "salaries2018"]
 
 # How many employees got a raise?
 length(salaries$got_raise[salaries$got_raise])
